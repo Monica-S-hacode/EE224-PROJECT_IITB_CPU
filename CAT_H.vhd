@@ -8,7 +8,7 @@ entity CAT_H is
     );
 end entity;
 
-architecture tralalala of 	CAT_H is
+architecture tralalala of CAT_H is
 begin
 
 process(A)
