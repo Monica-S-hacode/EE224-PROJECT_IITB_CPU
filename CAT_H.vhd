@@ -16,11 +16,11 @@ process(A)
 begin
 	 
     top: for i in 15 downto 8 loop
-        ans(i) := A(i-8);
+        cat(i) := A(i-8);
     end loop top;
 
     bot: for i in 7 downto 0 loop
-        ans(i) := '0';
+        cat(i) := '0';
     end loop bot;
 
     C <= cat;
