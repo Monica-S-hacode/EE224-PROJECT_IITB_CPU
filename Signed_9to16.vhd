@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity sign_ext_9to16 is
     port (
         A: in std_logic_vector(8 downto 0);
-        C: out std_logic_vector(15 downto 0)
+        B: out std_logic_vector(15 downto 0)
     );
 end entity;
 
@@ -15,6 +15,6 @@ begin
 process(A)
 
 	 begin
-    C <= std_logic_vector(to_signed(to_integer(signed(A)),16));
+    B <= std_logic_vector(to_signed(to_integer(signed(A)),16));
 end process;
 end struct;
