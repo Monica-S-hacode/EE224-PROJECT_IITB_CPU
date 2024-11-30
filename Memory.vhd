@@ -1,6 +1,7 @@
 library std;
 use std.standard.all;
 
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -41,7 +42,7 @@ architecture struct of memory is
 	begin
 	if(mem_write = '0') then
 			if(rising_edge(clk)) then
-	           mem_out <= mem(conv_integer(add));
+	           mem_out <= mem(to_integer(unsigned(add)));
 	      end if;
 	end if;
 	end process;
@@ -51,7 +52,7 @@ architecture struct of memory is
 		begin
 		if(mem_write = '1') then
 			if(rising_edge(clk)) then
-				  mem(conv_integer(add)) <= mem_in;
+				  mem(to_integer(unsigned(add))) <= mem_in;
 			end if;
 		end if;
 	end process;
