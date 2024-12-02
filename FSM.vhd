@@ -62,7 +62,7 @@ architecture helpme of FSM is
 					next_state <= s2;
 				elsif (opcode="1001") then
 					next_state <= s3;
-				elsif (opcode(3 downto 2)="00" or opcode(3 downto 2)="01" or opcode(3 downto 1)="101" or opcode="1100")
+				elsif (opcode(3 downto 2)="00" or opcode(3 downto 2)="01" or opcode(3 downto 1)="101" or opcode="1100")  then
 					next_state <= s8;
 				else
 				   next_state <= s0;
