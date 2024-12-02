@@ -136,7 +136,7 @@ end component;
 	signal state_5: std_logic_vector(4 downto 0);
 	signal RF_all0, RF_all1, RF_all2, RF_all3, RF_all4, RF_all5, RF_all6: std_logic_vector(15 downto 0);
 begin 
-FSM_instance      : FSM          port map (clk,reset,ir_out[15 downto 12],state);
+FSM_instance      : FSM          port map (clk,reset,ir_out(15 downto 12),state);
 datapath_instance : datapath     port map (state,alu_z,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,pc_w,mw,ir_w,rf_w,t1_w,t2_w,t3_w);
 Program_counter   : Register_16  port map (clk, PC_W, M1_out, PC_out);
 Memory_inst       : Memory       port map (M2_out, T1_out, Clk, MW, mem_out);
