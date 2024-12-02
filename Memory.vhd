@@ -40,7 +40,7 @@ architecture struct of memory is
 	memory_read:
 	process (mem_read, add, clk)
 	begin
-	if(mem_write = '0') then
+	if(mem_read = '1') then
 			if(rising_edge(clk)) then
 	           mem_out <= mem(to_integer(unsigned(add)));
 	      end if;
