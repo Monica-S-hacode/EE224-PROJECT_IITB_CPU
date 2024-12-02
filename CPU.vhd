@@ -129,7 +129,7 @@ end component;
 	signal IR_out, PC_out, mem_out, RF_D1, RF_D2 : std_logic_vector(15 downto 0);
 	signal M1_out, M2_out,M56_out, M78_out, M910_out, M11_out, M12_out: std_logic_vector(15 downto 0);
 	signal M34_out: std_logic_vector(2 downto 0);
-	signal ALU_C, T1_out, T2_out, T3_out, sign_ext9_out, sign_ext6_out,shift_6,shift_9 catL_out, catH_out: std_logic_vector(15 downto 0);
+	signal ALU_C, T1_out, T2_out, T3_out, sign_ext9_out, sign_ext6_out,shift_6,shift_9 ,catL_out, catH_out: std_logic_vector(15 downto 0);
 	signal PC_W, IR_W, T1_W, T2_W, T3_W, RF_W, MW: std_logic;
 	signal M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, ALU_Z: std_logic;
 	signal state: integer;
